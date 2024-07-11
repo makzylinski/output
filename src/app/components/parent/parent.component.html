@@ -1,3 +1,7 @@
 <div class="parent">
     <app-child (onNameChange)="displayNewName($event)" (changedAge)="displayNewAge($event)"></app-child>
+    <div>
+        <button (click)="onShowComponent()">Show Component</button>
+        <div #childComponent></div>
+    </div>
 </div>

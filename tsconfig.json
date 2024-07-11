@@ -3,7 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "strictPropertyInitialization": false,
     "paths": {
       "tslib" : ["./node_modules/tslib/tslib.d.ts"]
     },

@@ -1,5 +1,7 @@
 import { Component, output } from '@angular/core';
+import { outputFromObservable } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-child',
@@ -14,6 +16,7 @@ export class ChildComponent {
 
   name = '';
   age = 0;
+  age$ = outputFromObservable(of(this.age))
 
   setNewName = (newName: string) => this.onNameChange.emit(newName);
 
