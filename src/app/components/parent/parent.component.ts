@@ -1,14 +1,16 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { ChildComponent } from "../child/child.component";
 import { outputToObservable } from '@angular/core/rxjs-interop';
 import { tap } from 'rxjs';
+import { CardComponent } from "../card/card.component";
 
 @Component({
   selector: 'app-parent',
   standalone: true,
-  imports: [ChildComponent],
+  imports: [ChildComponent, CardComponent],
   templateUrl: './parent.component.html',
-  styleUrl: './parent.component.css'
+  styleUrl: './parent.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 
 export class ParentComponent implements OnInit {
